@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>古民家パン屋 YORIMICHI | 粕屋町のベーカリー</title>
+<meta name="description" content="福岡県糟屋郡粕屋町の古民家パン屋YORIMICHI。靴を脱いで入る非日常空間で、焼きたてパンとこだわりソフトクリームを。朝7:30から営業。">
+<link rel="canonical" href="https://fukuoka-connect.github.io/yorimichi/">
+<meta property="og:title" content="古民家パン屋 YORIMICHI | 粕屋町のベーカリー">
+<meta property="og:description" content="今朝、寄り道しませんか。粕屋町の古民家で、焼きたてパンを。朝7:30から。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fukuoka-connect.github.io/yorimichi/">
+<meta property="og:locale" content="ja_JP">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "古民家パン屋 YORIMICHI",
+  "url": "https://fukuoka-connect.github.io/yorimichi/",
+  "telephone": "092-939-1799",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "長者原東1-10-43",
+    "addressLocality": "糟屋郡粕屋町",
+    "addressRegion": "福岡県",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Wednesday","Thursday","Friday"],"opens": "07:30","closes": "18:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Saturday","Sunday"],"opens": "08:00","closes": "18:00"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&family=Zen+Maru+Gothic:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --wheat: #D4A574;
+  --wheat-light: #E8C9A0;
+  --cream: #FFF8F0;
+  --cream-warm: #FFF0E0;
+  --brown: #4A3728;
+  --brown-dark: #2E2018;
+  --terra: #C17840;
+  --terra-light: #D4935E;
+  --text: #3A2A1E;
+  --text-light: #7A6A5E;
+  --font-maru: 'Zen Maru Gothic', sans-serif;
+  --font-antique: 'Shippori Antique', serif;
+  --ease: cubic-bezier(.25,.46,.45,.94);
+}
+
+body{
+  font-family: var(--font-maru);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+/* ===== NAV ===== */
+.nav{
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 32px;
+  transition: background .4s var(--ease), box-shadow .4s var(--ease);
+}
+.nav.scrolled{
+  background: rgba(255,248,240,.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(58,42,30,.06);
+}
+.nav-logo{
+  font-family: var(--font-antique);
+  font-size: 18px;
+  color: var(--brown);
+  letter-spacing: 0.15em;
+}
+.nav-cta{
+  padding: 8px 20px;
+  background: var(--wheat);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  transition: opacity .3s;
+}
+.nav-cta:hover{ opacity: .8; }
+
+/* ===== HERO ===== */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 24px;
+  overflow: hidden;
+}
+.hero-time{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: var(--font-antique);
+  font-size: clamp(200px, 35vw, 500px);
+  color: var(--wheat);
+  opacity: 0.04;
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -0.03em;
+}
+.hero-catch{
+  font-family: var(--font-antique);
+  font-size: clamp(24px, 5vw, 40px);
+  letter-spacing: 0.12em;
+  line-height: 2;
+  color: var(--brown);
+  position: relative; z-index: 1;
+}
+.hero-sub{
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-light);
+  letter-spacing: 0.1em;
+  position: relative; z-index: 1;
+}
+.hero-line{
+  width: 1px; height: 60px;
+  background: var(--wheat);
+  opacity: .3;
+  margin-top: 48px;
+}
+
+/* ===== SECTION SPACING ===== */
+.sec-300{ padding-top: 300px; }
+.sec-260{ padding-top: 260px; }
+.sec-240{ padding-top: 240px; }
+.sec-220{ padding-top: 220px; }
+.sec-200{ padding-top: 200px; }
+
+/* ===== 古民家体験 ===== */
+.kominka{
+  position: relative;
+  padding-bottom: 140px;
+  overflow: hidden;
+}
+.kominka::before{
+  content: 'YORIMICHI';
+  position: absolute;
+  top: 10%; right: -3%;
+  font-family: var(--font-antique);
+  font-size: clamp(100px, 18vw, 240px);
+  color: var(--wheat);
+  opacity: 0.03;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+}
+.kominka-inner{
+  max-width: 1100px; margin: 0 auto; padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.kominka-img{
+  background: var(--cream-warm);
+  aspect-ratio: 3/4;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-light); font-size: 13px;
+  border-radius: 0 0 40% 0;
+  margin-left: -60px;
+}
+.kominka-content{ position: relative; }
+.kominka-lead{
+  font-family: var(--font-antique);
+  font-size: clamp(20px, 4vw, 30px);
+  letter-spacing: 0.1em;
+  line-height: 2;
+  color: var(--brown);
+  margin-bottom: 32px;
+}
+.kominka-text{
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2.4;
+  color: var(--text);
+}
+
+/* ===== パン ===== */
+.bread{
+  position: relative;
+  padding-bottom: 140px;
+  overflow: hidden;
+}
+.bread::before{
+  content: 'BREAD';
+  position: absolute;
+  bottom: 5%; left: -2%;
+  font-family: var(--font-antique);
+  font-size: clamp(120px, 20vw, 280px);
+  color: var(--wheat);
+  opacity: 0.03;
+  pointer-events: none;
+  letter-spacing: 0.08em;
+}
+.bread-inner{
+  max-width: 1100px; margin: 0 auto; padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: center;
+}
+.bread-content{}
+.bread-title{
+  font-family: var(--font-antique);
+  font-size: clamp(20px, 4vw, 28px);
+  letter-spacing: 0.1em;
+  line-height: 2;
+  color: var(--brown);
+  margin-bottom: 32px;
+}
+.bread-text{
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2.4;
+  color: var(--text);
+}
+.bread-img{
+  background: var(--cream-warm);
+  aspect-ratio: 4/3;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-light); font-size: 13px;
+  border-radius: 0 0 0 40%;
+  position: relative;
+  right: -40px;
+}
+
+/* ===== ソフトクリーム ===== */
+.soft{
+  background: var(--terra);
+  color: var(--cream);
+  padding: 100px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.soft::before{
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.soft-inner{
+  max-width: 600px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.soft-catch{
+  font-family: var(--font-antique);
+  font-size: clamp(22px, 4vw, 32px);
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+}
+.soft-text{
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2.2;
+  color: rgba(255,248,240,.85);
+}
+
+/* ===== メディア ===== */
+.media{
+  padding-bottom: 140px;
+  position: relative;
+  overflow: hidden;
+}
+.media::before{
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle, var(--wheat) 1.5px, transparent 1.5px),
+    radial-gradient(circle, var(--wheat) 1.5px, transparent 1.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.media-inner{
+  max-width: 800px; margin: 0 auto; padding: 0 32px;
+  text-align: center;
+  position: relative; z-index: 1;
+}
+.media-title{
+  font-family: var(--font-antique);
+  font-size: clamp(20px, 3.5vw, 26px);
+  letter-spacing: 0.1em;
+  color: var(--brown);
+  margin-bottom: 48px;
+}
+.media-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 40px;
+  margin-bottom: 48px;
+}
+.media-list li{
+  list-style: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+.media-review{
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.media-review-num{
+  font-family: var(--font-antique);
+  font-size: clamp(48px, 8vw, 72px);
+  color: var(--wheat);
+  line-height: 1;
+}
+.media-review-label{
+  font-size: 14px;
+  color: var(--text-light);
+  letter-spacing: 0.08em;
+}
+
+/* ===== 地域 ===== */
+.local{
+  padding-bottom: 120px;
+  text-align: center;
+}
+.local-inner{
+  max-width: 700px; margin: 0 auto; padding: 0 32px;
+}
+.local-catch{
+  font-family: var(--font-antique);
+  font-size: clamp(20px, 4vw, 28px);
+  letter-spacing: 0.12em;
+  line-height: 2;
+  color: var(--brown);
+  margin-bottom: 32px;
+}
+.local-text{
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2.4;
+  color: var(--text);
+}
+
+/* ===== 声 ===== */
+.voice{
+  padding-bottom: 120px;
+  background: var(--cream);
+}
+.voice-inner{
+  max-width: 700px; margin: 0 auto; padding: 0 32px;
+}
+.voice-item{
+  margin-bottom: 72px;
+  padding-left: 28px;
+  position: relative;
+}
+.voice-item::before{
+  content: '';
+  position: absolute;
+  left: 0; top: 8px;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--wheat);
+}
+.voice-text{
+  font-size: 16px;
+  line-height: 2.2;
+  color: var(--text);
+}
+.voice-attr{
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-light);
+  margin-top: 8px;
+  letter-spacing: 0.08em;
+}
+
+/* ===== アクセス ===== */
+.access{
+  background: var(--brown-dark);
+  color: var(--cream);
+  padding: 120px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.access-time-bg{
+  position: absolute;
+  top: 50%; right: 5%;
+  transform: translateY(-50%);
+  font-family: var(--font-antique);
+  font-size: clamp(150px, 25vw, 350px);
+  color: rgba(255,255,255,.02);
+  pointer-events: none;
+  letter-spacing: -0.02em;
+}
+.access-inner{
+  max-width: 1000px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  position: relative; z-index: 1;
+}
+.access-label{
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: var(--wheat-light);
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+.access-name{
+  font-family: var(--font-antique);
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+.access-info dt{
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--wheat-light);
+  margin-top: 20px;
+}
+.access-info dt:first-child{ margin-top: 0; }
+.access-info dd{
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--cream);
+  margin-top: 4px;
+}
+.access-tel{
+  display: inline-block;
+  font-family: var(--font-antique);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  margin-top: 28px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,248,240,.2);
+  transition: border-color .3s;
+}
+.access-tel:hover{ border-color: rgba(255,248,240,.5); }
+.access-map{
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.access-map iframe{
+  width: 100%; height: 100%; border: 0;
+  filter: grayscale(.8) contrast(.9);
+  opacity: .8;
+}
+
+/* ===== CTA ===== */
+.cta{
+  padding: 140px 32px;
+  text-align: center;
+  background: var(--cream);
+}
+.cta-catch{
+  font-family: var(--font-antique);
+  font-size: clamp(20px, 4vw, 28px);
+  letter-spacing: 0.12em;
+  line-height: 2;
+  color: var(--brown);
+  margin-bottom: 40px;
+}
+.cta-btn{
+  display: inline-block;
+  padding: 16px 48px;
+  background: var(--wheat);
+  color: #fff;
+  border-radius: 50px;
+  font-family: var(--font-maru);
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  transition: opacity .3s;
+}
+.cta-btn:hover{ opacity: .8; }
+.cta-handle{
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-light);
+  margin-top: 16px;
+  letter-spacing: 0.08em;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  padding: 40px 32px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+/* ===== WAVE DIVIDER ===== */
+.wave-divider{
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+}
+.wave-divider svg{
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+  .nav{ padding: 14px 20px; }
+  .kominka-inner{ grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+  .kominka-img{ margin-left: 0; border-radius: 0 0 20% 0; }
+  .bread-inner{ grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+  .bread-img{ right: 0; border-radius: 0 0 0 20%; order: -1; }
+  .media-inner{ padding: 0 20px; }
+  .access-inner{ grid-template-columns: 1fr; gap: 40px; }
+  .access-map{ aspect-ratio: 16/10; }
+  .sec-300{ padding-top: 160px; }
+  .sec-260{ padding-top: 140px; }
+  .sec-240{ padding-top: 130px; }
+  .sec-220{ padding-top: 120px; }
+  .sec-200{ padding-top: 100px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">YORIMICHI</a>
+  <a href="https://www.instagram.com/yorimichi_pain.fuk/" target="_blank" rel="noopener" class="nav-cta">Instagram</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-time" aria-hidden="true">7:30</span>
+  <h1 class="hero-catch">今朝、<br>寄り道しませんか。</h1>
+  <p class="hero-sub">粕屋町の古民家パン屋 ── 朝7:30から。</p>
+  <div class="hero-line" aria-hidden="true"></div>
+</section>
+
+<!-- 古民家体験 -->
+<section class="kominka sec-300 reveal">
+  <div class="kominka-inner">
+    <div class="kominka-img">古民家外観・玄関写真</div>
+    <div class="kominka-content">
+      <h2 class="kominka-lead">靴を、<br>脱いでください。</h2>
+      <p class="kominka-text">
+        玄関を開けると、土間のにおい。<br>
+        靴を脱いで上がると、古い木の床がやさしく軋む。<br>
+        中庭の緑を眺めながらパンを頬張る──<br>
+        ここは、ただのパン屋ではなく、<br>
+        「朝の時間」を過ごす場所です。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- パン -->
+<section class="bread sec-260 reveal">
+  <div class="bread-inner">
+    <div class="bread-content">
+      <h2 class="bread-title">朝4時。<br>生地が息をする音から<br>一日が始まる。</h2>
+      <p class="bread-text">
+        まだ暗い厨房で、前日から仕込んだ生地が膨らんでいく。<br>
+        その生地を丁寧に成形し、窯へ。<br>
+        焼き上がりの香りが店中に満ちる頃、<br>
+        最初のお客さんがやってくる。<br><br>
+        ハード系もソフト系も、惣菜パンもデニッシュも。<br>
+        「今日はどれにしよう」と迷う時間も、YORIMICHIの楽しみです。
+      </p>
+    </div>
+    <div class="bread-img">焼きたてパン写真</div>
+  </div>
+</section>
+
+<!-- ソフトクリーム -->
+<section class="soft reveal">
+  <div class="soft-inner">
+    <h2 class="soft-catch">パンだけじゃない。</h2>
+    <p class="soft-text">
+      実は、ソフトクリームも人気なんです。<br>
+      パンを選んだ後、中庭を眺めながら食べるソフトクリーム。<br>
+      この組み合わせを知ったら、もう戻れません。
+    </p>
+  </div>
+</section>
+
+<!-- メディア -->
+<section class="media sec-260 reveal">
+  <div class="media-inner">
+    <h2 class="media-title">テレビで見た、あの店。</h2>
+    <ul class="media-list">
+      <li>KBC「ジモタイムズ」</li>
+      <li>ふくおかナビ</li>
+      <li>パンめぐ</li>
+      <li>かすやパンマルシェ</li>
+    </ul>
+    <div class="media-review">
+      <span class="media-review-num">4.46</span>
+      <span class="media-review-label">Google口コミ</span>
+    </div>
+  </div>
+</section>
+
+<!-- 地域 -->
+<section class="local sec-220 reveal">
+  <div class="local-inner">
+    <h2 class="local-catch">この町の、<br>いつもの寄り道に。</h2>
+    <p class="local-text">
+      「かすやパンマルシェ」をはじめ、<br>
+      地域のイベントにも参加しています。<br>
+      粕屋町に根を下ろして、<br>
+      この町のいつもの風景になりたい。<br>
+      毎朝、ここで待っています。
+    </p>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voice sec-240 reveal">
+  <div class="voice-inner">
+    <div class="voice-item">
+      <p class="voice-text">靴を脱いで入る瞬間に「今日はちょっと特別な朝だな」と思える。パンの味ももちろん最高です。</p>
+      <span class="voice-attr">── 30代女性・粕屋町</span>
+    </div>
+    <div class="voice-item">
+      <p class="voice-text">子どもが中庭を見て大喜びするので、週末の朝はここが定番になりました。</p>
+      <span class="voice-attr">── 40代女性・志免町</span>
+    </div>
+    <div class="voice-item">
+      <p class="voice-text">出勤前に寄れるのがありがたい。7:30からやってるパン屋って、なかなかないですよ。</p>
+      <span class="voice-attr">── 40代男性・福岡市東区</span>
+    </div>
+  </div>
+</section>
+
+<!-- アクセス -->
+<section class="access">
+  <span class="access-time-bg" aria-hidden="true">7:30</span>
+  <div class="access-inner">
+    <div>
+      <p class="access-label">ACCESS</p>
+      <h2 class="access-name">古民家パン屋 YORIMICHI</h2>
+      <dl class="access-info">
+        <dt>住所</dt>
+        <dd>福岡県糟屋郡粕屋町長者原東1-10-43</dd>
+        <dt>営業時間</dt>
+        <dd>水・木・金 ── 7:30〜18:00<br>土・日・祝 ── 8:00〜18:00</dd>
+        <dt>定休日</dt>
+        <dd>月曜・火曜</dd>
+      </dl>
+      <a href="tel:0929391799" class="access-tel">092-939-1799</a>
+    </div>
+    <div class="access-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323!2d130.49!3d33.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zWU9SSU1JQ0hJ!5e0!3m2!1sja!2sjp!4v1"
+        allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="YORIMICHIの地図">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2 class="cta-catch">明日の朝、<br>寄り道しませんか。</h2>
+  <a href="https://www.instagram.com/yorimichi_pain.fuk/" target="_blank" rel="noopener" class="cta-btn">Instagramを見る</a>
+  <p class="cta-handle">@yorimichi_pain.fuk</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  &copy; 古民家パン屋 YORIMICHI. All rights reserved.
+</footer>
+
+<script>
+// NAV scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+}, { passive: true });
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
