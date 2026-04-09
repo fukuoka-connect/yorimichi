@@ -107,6 +107,7 @@ body{
   text-align: center;
   padding: 100px 24px;
   overflow: hidden;
+  background: linear-gradient(rgba(255,248,240,.55), rgba(255,248,240,.75)), url('images/hero-evening.png') center/cover no-repeat;
 }
 .hero-time{
   position: absolute;
@@ -175,12 +176,14 @@ body{
   align-items: center;
 }
 .kominka-img{
-  background: var(--cream-warm);
   aspect-ratio: 3/4;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-light); font-size: 13px;
   border-radius: 0 0 40% 0;
   margin-left: -60px;
+  overflow: hidden;
+}
+.kominka-img img{
+  width: 100%; height: 100%;
+  object-fit: cover;
 }
 .kominka-content{ position: relative; }
 .kominka-lead{
@@ -238,18 +241,40 @@ body{
   color: var(--text);
 }
 .bread-img{
-  background: var(--cream-warm);
   aspect-ratio: 4/3;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-light); font-size: 13px;
   border-radius: 0 0 0 40%;
   position: relative;
   right: -40px;
+  overflow: hidden;
+}
+.bread-img img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* パンギャラリー */
+.bread-gallery{
+  max-width: 1100px; margin: 60px auto 0; padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.bread-gallery-item{
+  overflow: hidden;
+  border-radius: 12px;
+}
+.bread-gallery-item img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform .4s var(--ease);
+}
+.bread-gallery-item:hover img{
+  transform: scale(1.05);
 }
 
 /* ===== ソフトクリーム ===== */
 .soft{
-  background: var(--terra);
+  background: linear-gradient(rgba(193,120,64,.88), rgba(193,120,64,.92)), url('images/interior-lamp.png') center/cover no-repeat;
   color: var(--cream);
   padding: 100px 32px;
   text-align: center;
@@ -347,6 +372,14 @@ body{
 }
 .local-inner{
   max-width: 700px; margin: 0 auto; padding: 0 32px;
+}
+.local-img{
+  max-width: 500px; margin: 0 auto 48px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.local-img img{
+  width: 100%; height: auto;
 }
 .local-catch{
   font-family: var(--font-antique);
@@ -547,6 +580,7 @@ body{
   .kominka-img{ margin-left: 0; border-radius: 0 0 20% 0; }
   .bread-inner{ grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
   .bread-img{ right: 0; border-radius: 0 0 0 20%; order: -1; }
+  .bread-gallery{ grid-template-columns: 1fr 1fr; padding: 0 20px; margin-top: 40px; }
   .media-inner{ padding: 0 20px; }
   .access-inner{ grid-template-columns: 1fr; gap: 40px; }
   .access-map{ aspect-ratio: 16/10; }
@@ -577,7 +611,7 @@ body{
 <!-- 古民家体験 -->
 <section class="kominka sec-300 reveal">
   <div class="kominka-inner">
-    <div class="kominka-img">古民家外観・玄関写真</div>
+    <div class="kominka-img"><img src="images/kominka-exterior.png" alt="YORIMICHIの古民家外観" loading="lazy"></div>
     <div class="kominka-content">
       <h2 class="kominka-lead">靴を、<br>脱いでください。</h2>
       <p class="kominka-text">
@@ -605,7 +639,12 @@ body{
         「今日はどれにしよう」と迷う時間も、YORIMICHIの楽しみです。
       </p>
     </div>
-    <div class="bread-img">焼きたてパン写真</div>
+    <div class="bread-img"><img src="images/bread-wide.png" alt="焼きたてパンの陳列" loading="lazy"></div>
+  </div>
+  <div class="bread-gallery reveal">
+    <div class="bread-gallery-item"><img src="images/bread-closeup.png" alt="焼きたてパン" loading="lazy"></div>
+    <div class="bread-gallery-item"><img src="images/bread-burger.png" alt="惣菜パン" loading="lazy"></div>
+    <div class="bread-gallery-item"><img src="images/bread-counter.png" alt="パンカウンター" loading="lazy"></div>
   </div>
 </section>
 
@@ -641,6 +680,7 @@ body{
 <!-- 地域 -->
 <section class="local sec-220 reveal">
   <div class="local-inner">
+    <div class="local-img"><img src="images/approach.png" alt="YORIMICHIへの小道" loading="lazy"></div>
     <h2 class="local-catch">この町の、<br>いつもの寄り道に。</h2>
     <p class="local-text">
       「かすやパンマルシェ」をはじめ、<br>
